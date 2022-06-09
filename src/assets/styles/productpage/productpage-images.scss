@@ -1,0 +1,34 @@
+.productpage-images-cont {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 33em;
+    gap: 5px;
+    .productpage-images-scroll {
+        overflow-y: scroll;
+        scrollbar-color: black;
+        height: 100%;
+        padding-right: 5px;
+        .productpage-small-image {
+            width: 100%;
+            img {
+                width: 100%;
+                height: 9em;
+                
+            }
+        }
+    }
+
+    .productpage-images-main {
+        height: 100%;
+        img {
+            width: 100%;
+            height: 33em;
+        }
+    }
+
+
+
+    .productpage-images-scroll::-webkit-scrollbar {
+        width: 0;
+    }
+}

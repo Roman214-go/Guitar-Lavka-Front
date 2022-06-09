@@ -1,0 +1,30 @@
+.catalog-settings-cont {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 3%;
+    align-items: center;
+    .catalog-sort {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+    p, span {
+        font-weight: 200;
+        font-size: 14px;
+    }
+    input {
+        background-color: red;
+        color: white;
+        border: none;
+    }
+   .catalog-select {
+        select {
+            width: 150px;
+            height: 30px;
+            border-radius: 10px;
+            background-color: rgb(124, 124, 124);
+            color: white;
+        }
+    }
+    
+}

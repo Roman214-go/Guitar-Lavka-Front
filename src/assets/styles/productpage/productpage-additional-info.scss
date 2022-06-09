@@ -1,0 +1,41 @@
+.productpage-additional-info-cont {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10%;
+    .proudctpage-additional-info-buttons {
+        margin-left: 5%;
+        button {
+            background-color: rgb(24, 23, 23);
+            color: white;
+            padding: 1% 2%;
+            border: none;
+            width: 15%;
+        }
+        .productpage-additional-info-button {
+            border: 1px solid white;
+            color: orange
+        }
+    }
+
+    .productpage-additional-info {
+        height: 350px;
+        overflow-y: scroll;
+        padding: 1% 2%;
+        border: 1px solid white;
+        border-radius: 20px;
+        p {
+            line-height: 25px;
+        }
+        li {
+            margin-bottom: 3px;
+            list-style-type: circle;
+            margin-left: 1.5%;
+        }
+    }
+
+    .productpage-additional-info::-webkit-scrollbar {
+        width: 0;
+    }
+
+    
+}

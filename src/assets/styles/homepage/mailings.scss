@@ -1,0 +1,49 @@
+.homepage-mailings-container {
+    margin: 9% 0;
+    height: 350px;
+    background-image: url("../../img/homepage/mailings.png");
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    filter: hue-rotate(190deg);
+    .homepage-mailings {
+        background-color: rgb(228, 255, 255);
+        width: 32%;
+        height: 150px;
+        border-radius: 30px;
+        margin-left:45%;
+        text-align: center;
+        padding: 50px;
+        p {
+            color: black;
+        }
+        span {
+            font-size: 14px;
+            color: #BFB9B1;
+        }
+        h1 {
+            color: #0894cc;
+            font-weight: 1000;
+        }
+        form {
+            display: flex;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            gap: 10px;
+            input {
+                width: 90%;
+                height: 30px;
+                font-size: 16px;
+                padding-left: 10px;
+            }
+            button {
+                background-color: #0894cc;
+                border: none;
+            }
+        }
+        a {
+            color: rgb(167, 167, 167);
+            text-decoration: underline;
+        }
+    }
+}

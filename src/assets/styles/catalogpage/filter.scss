@@ -1,0 +1,14 @@
+.catalog-filters {
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-left: 10%;
+    input {
+        position: absolute;
+        left: -99999px;
+    }
+    .radio-ukulele:checked {
+        color: orange
+    }
+}

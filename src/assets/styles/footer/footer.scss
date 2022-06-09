@@ -1,0 +1,32 @@
+.footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 10%;
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        p {
+            color: rgb(175, 173, 173);
+            margin-bottom: 4px;
+        }
+    }
+
+    .footer-right {
+        display: flex;
+        justify-content: space-around;
+        
+        .footer-block {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            h2 {
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+            .footer-links:hover {
+                color: orange;
+            }
+        }
+    }
+}

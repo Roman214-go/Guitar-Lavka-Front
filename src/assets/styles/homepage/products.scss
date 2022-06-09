@@ -1,0 +1,49 @@
+.homepage-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    background: linear-gradient(to bottom,  rgb(24, 23, 23) 70%, orange 30%);
+    .homepage-product {
+        width: 520px;
+        height: 296px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        text-align: center;
+        margin-top: auto;
+        align-items: center;
+        font-weight: 570;
+        a {
+            font-size: 20px;
+        }        
+        a:hover {
+            color: orange;
+            transition: all 0.2s ease-in;
+        }
+        
+    }
+    .homepage-product-ukulele {
+        background-image: url('../../img/homepage/products/ukulele.png');
+        background-repeat: no-repeat;
+    }
+    .homepage-product-guitars {
+        background-image: url('../../img/homepage/products/guitars.png');
+        background-repeat: no-repeat;
+    }
+    .homepage-product-strings {
+        background-image: url('../../img/homepage/products/strings.png');
+        background-repeat: no-repeat;
+    }
+    .homepage-product-accessories {
+        background-image: url('../../img/homepage/products/accessories.png');
+        background-repeat: no-repeat;
+    }
+}
+
+.homepage-product:hover img {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in;
+}
+

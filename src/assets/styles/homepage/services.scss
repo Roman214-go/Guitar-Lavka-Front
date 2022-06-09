@@ -1,0 +1,67 @@
+.homepage-services {
+    margin: 3% 0; 
+    
+    h2 {
+        text-align: center;
+        div {
+            margin: 5px auto;
+            border-bottom: 1px solid orange;
+            width: 150px;
+        }
+    }
+    .homepage-services-container {
+        display: flex;
+        justify-content: center;
+        gap: 2%;
+        margin-top: 2%;
+        .homepage-service-container {
+            width: 300px;
+            height: 400px;
+
+            p {
+                position: relative; 
+                transition: all 0.3s ease;
+                opacity: 0;
+                padding: 50px;
+                letter-spacing: 2px;
+                line-height: 30px;
+                height: 230px;
+            }
+                h3 {
+                    height: 85px;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 24px;
+                } 
+    
+        }
+
+        .homepage-service-container:hover {
+            p {
+                opacity: 1;
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+            h3 {
+                color: orange;
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        .homepage-service-reparing {
+            background-image: url(../../img/homepage/home-services/reparing.png);
+            background-repeat: no-repeat;
+        }
+        .homepage-service-trainee {
+            background-image: url(../../img/homepage/home-services/trainee.png);
+            background-repeat: no-repeat;
+        }
+        .homepage-service-delivery {
+            background-image: url(../../img/homepage/home-services/delivery.png);
+            background-repeat: no-repeat;
+        }
+    }
+}
+
