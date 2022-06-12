@@ -1,0 +1,40 @@
+.basketpage {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 2% 2%;
+    gap: 20px;
+}
+
+.basket-empty {
+    text-align: center;
+    margin-top: 10%;
+    p, a {
+    font-size: 32px;
+    }
+    a {
+        color: rgb(118, 118, 118);
+    }
+    .basket-empty-anim {
+            animation-name: basket;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            margin-top: 60px;
+            width: 10em;
+            height: 10em;
+        path {
+
+            stroke: white;
+        }
+    }
+}
+@keyframes basket {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);    
+    }
+    100% {
+        transform: scale(1);
+    }
+}

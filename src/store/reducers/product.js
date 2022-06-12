@@ -2,18 +2,20 @@ import { SET_ALL_PRODUCTS, SET_ONE_PRODUCT, SET_POPULAR_PRODUCTS } from "../acti
 
 const defaultState = {
     allProducts: [],
-    numOfProducts: 0,
     popularProducts: [],
     oneProduct: [],
+    numOfProducts: 0,
+    
 }
 
 export const products = (state = defaultState, {type, payload}) => {
     switch(type) {
         case SET_ALL_PRODUCTS:
-            return {
+            console.log(payload);
+        return {
                 ...state,
                 allProducts: payload,
-                numOfProducts: payload.countProudcts,
+                numOfProducts: payload.countProducts,
             }
         case SET_POPULAR_PRODUCTS:
             return {
@@ -26,6 +28,7 @@ export const products = (state = defaultState, {type, payload}) => {
                 oneProduct: payload
             }
         default:
+            
             return {
                 ...state
             }

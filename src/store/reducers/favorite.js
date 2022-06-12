@@ -4,18 +4,18 @@ const defaultState = {
     favoriteProducts: []
 }
 
-export const basket = (state = defaultState, {type, payload}) => {
+export const favorite = (state = defaultState, {type, payload}) => {
     switch(type) {
         case ADD_PRODUCT_TO_FAVORITE: 
             return {
                 ...state,
-                basketProducts: [...state.basketProducts, payload]
+                favoriteProducts: [...state.favoriteProducts, payload]
             }
         case DELETE_PRODUCT_FROM_FAVORITE:
             return {
                 ...state,
-                basketProducts: state.basketProducts.filter(id => id != payload)
-            } 
+                favoriteProducts: state.favoriteProducts.filter(info => info != payload)
+            }
         default:
             return {
                 ...state

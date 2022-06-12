@@ -37,6 +37,9 @@
             .productpage-active-button {
                 background-color: rgb(113, 75, 3);
             }
+            button:disabled {
+                opacity: 0.8;
+            }
         }
     }
 

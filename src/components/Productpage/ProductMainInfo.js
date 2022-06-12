@@ -1,47 +1,54 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
-export default function ProductMainInfo({info: {name, productType, description, isStock, price}, id}) {
+export default function ProductMainInfo({info}) {
     const basketState = useSelector(state => state.basket.basketProducts)
-    
-    const [inBasket, setInBasket] = useState(basketState.includes(id))
-    const [isFavorite, setIsFavorite] = useState(false)
+    const favoriteState = useSelector(state => state.favorite.favoriteProducts)
+    const [inBasket, setInBasket] = useState(basketState.includes(info))
+    const [isFavorite, setIsFavorite] = useState(favoriteState.includes(info))
     const dispatch = useDispatch()
-    
+    const dispatchRemoveFromBasket = () => {
+        dispatch({type: "SET_PRODUCT_BASKET_COUNT", payload: -1})
+        dispatch({type: "SET_PRODUCT_BASKET_COUNT_PRICE", payload: -info.price})
+        dispatch({type: "DELETE_PRODUCT_FROM_BASKET", payload: info})
+    }
+    const dispatchAddToBasket = () => {
+        dispatch({type: "ADD_PRODUCT_TO_BASKET", payload: info})
+        dispatch({type: "SET_PRODUCT_BASKET_COUNT", payload: 1})
+        dispatch({type: "SET_PRODUCT_BASKET_COUNT_PRICE", payload: info.price})
+    }
     const addToBasket = () => {
         setInBasket(!inBasket)
         inBasket ?
-        dispatch({type: "DELETE_PRODUCT_FROM_BASKET", payload: id})
+        dispatchRemoveFromBasket()
         :
-        dispatch({type: "ADD_PRODUCT_TO_BASKET", payload: id})
-        
-        
+        dispatchAddToBasket()
     }
     const addToFavorite = () => {
         setIsFavorite(!isFavorite)
         isFavorite ?
-        dispatch({type: "DELETE_PRODUCT_FROM_FAVORITE", payload: id})
+        dispatch({type: "DELETE_PRODUCT_FROM_FAVORITE", payload: info})
         :
-        dispatch({type: "ADD_PRODUCT_TO_FAVORITE", payload: id})
+        dispatch({type: "ADD_PRODUCT_TO_FAVORITE", payload: info})
     }
     return (
         <div className="productpage-main-info">
             <div className="productpage-main-info-top">
-                <h3>{productType}</h3>
-                <h2 style={{margin: "10px 0"}}>{name}</h2>
-                <p className="productpage-main-description">{description}</p>
+                <h3>{info.productType}</h3>
+                <h2 style={{margin: "10px 0"}}>{info.name}</h2>
+                <p className="productpage-main-description">{info.description}</p>
                 <p style={{color: "orange", margin: "10px 0"}}>
                     {
-                        isStock ? "In stock" : "Out of stock"
+                        info.isStock ? "In stock" : "Out of stock"
                     }
                 </p>
             </div>
 
             <div className="productpage-main-info-bottom">
                 <span style={{fontSize: "20px"}}>Price</span>
-                <span>{price} $</span>
+                <span>{info.price} $</span>
                 <div className="productpage-main-info-buttons">
-                    <button onClick={addToBasket} className={inBasket ? "productpage-active-button" : ""}>
+                    <button onClick={addToBasket} className={inBasket ? "productpage-active-button" : ""} disabled={info.isStock ?  false : true}>
                         {
                             inBasket ? "REMOVE FROM BASKET" : "ADD TO BASKET" 
                         }

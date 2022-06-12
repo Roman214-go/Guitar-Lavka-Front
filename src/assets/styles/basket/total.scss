@@ -1,0 +1,34 @@
+.basket-total-cont {
+    position: sticky;
+    top: 20px;
+    .basket-total-info-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 20px;
+        border: 1px solid white;
+        height: 200px;
+        padding: 20px 25px;
+        border-radius: 20px;
+        h3 {
+            border-bottom: 2px solid orange;
+            padding-bottom: 10px;
+        }
+        .basket-total-info {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    button {
+        width: 100%;
+        height: 40px;
+        margin-top: 10px;
+        background-color: orange;
+        color: white;
+        border-radius: 10px;
+    }
+    button:active {
+        background-color: rgb(164, 107, 0);
+
+    }
+}
