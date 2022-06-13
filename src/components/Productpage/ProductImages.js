@@ -1,10 +1,13 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
 export default function ProductImages({images: {images}}) {
-    const [mainImage, setMainimage] = useState(images[0].url)
+    const [mainImage, setMainImage] = useState(images[0].url)
     const changeMainImage = (e) => {
-        setMainimage(e.target.src)
+        setMainImage(e.target.src)
     }
+    useEffect(() => {
+        setMainImage(images[0].url)
+    }, [images])
     return (
         <div className="productpage-images-cont">
            <div className="productpage-images-scroll">

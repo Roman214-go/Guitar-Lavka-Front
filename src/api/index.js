@@ -13,6 +13,6 @@ export const getPopularProducts = async (url) => {
 }
 
 export const getOneProduct = async (url) => {
-    const res = await axios.get(url).then(res => res.data)
+    const res = await axios.get(url).then(res => res.data).catch(err => err.response.status)
     return res
 }

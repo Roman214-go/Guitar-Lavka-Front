@@ -1,0 +1,80 @@
+.favorite-products-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 2% 5%;
+    .favorite-proudct {
+        display: flex;
+        gap: 20px;
+        line-height: 1.3em;
+        .favorite-product-characteristic {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+            button {
+                padding: 7px;
+                background-color: orange;
+                color: white;
+                border-radius: 7px;
+            }
+            img {
+                height: 247px;
+                width: 182px;
+            }
+            ul {
+                margin-top: 15px;
+            }
+            li {
+                color: rgb(135, 132, 132);
+            }
+            p {
+                font-size: 20px;
+                color: rgb(135, 132, 132);
+            }
+            a:hover {
+                color: orange;
+            }
+            button:active {
+                background-color: rgb(152, 99, 0);
+            }
+    }
+}
+
+.favorite-empty {
+    text-align: center;
+    padding-top: 10%;
+    p, a {
+    font-size: 32px;
+    }
+    a {
+        color: rgb(118, 118, 118);
+    }
+    .favorite-empty-anim {
+            animation-name: favorite;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            margin-top: 100px;
+            width: 10em;
+            height: 10em;
+        path {
+            stroke: white;
+        }
+    }
+}
+@keyframes favorite {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);    
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.favorite-proudct:hover {
+    transform: scale(1.01);
+    transition: .5s;
+}

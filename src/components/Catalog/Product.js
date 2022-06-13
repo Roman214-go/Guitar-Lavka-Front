@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
-import  { GrFormNext, GrFormPrevious } from "react-icons/gr" 
+import { GrFormNext, GrFormPrevious } from "react-icons/gr" 
 import { MdLastPage, MdFirstPage } from "react-icons/md"
+import { useEffect } from "react"
 
 const Product = ({products: {products, countProducts}}) => {
     const currentPage = useSelector(state => state.catalogSort.page)
@@ -9,8 +10,10 @@ const Product = ({products: {products, countProducts}}) => {
     let pagePagination = new Array(Math.ceil(countProducts/16)).fill().map((_, idx) => 1 + idx)
     const changePage = (e) => {
         dispatch({type: "SET_PRODUCTS_SORT_PAGE", payload: e.target.innerText})
-        
     }
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [currentPage])
     return (
         <div className="catalog-products-cont">
             <div className="products-cont">

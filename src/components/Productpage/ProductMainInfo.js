@@ -1,12 +1,22 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
 export default function ProductMainInfo({info}) {
     const basketState = useSelector(state => state.basket.basketProducts)
     const favoriteState = useSelector(state => state.favorite.favoriteProducts)
-    const [inBasket, setInBasket] = useState(basketState.includes(info))
-    const [isFavorite, setIsFavorite] = useState(favoriteState.includes(info))
+
+    const checkState = (element) => element.id == info.id
+    
+    const [inBasket, setInBasket] = useState(false)
+    const [isFavorite, setIsFavorite] = useState(false)
+    
     const dispatch = useDispatch()
+    
+    useEffect(() => {
+        setInBasket(basketState.some(checkState))
+        setIsFavorite(favoriteState.some(checkState))
+    }, [info])
+
     const dispatchRemoveFromBasket = () => {
         dispatch({type: "SET_PRODUCT_BASKET_COUNT", payload: -1})
         dispatch({type: "SET_PRODUCT_BASKET_COUNT_PRICE", payload: -info.price})

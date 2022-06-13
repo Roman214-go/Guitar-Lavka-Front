@@ -4,10 +4,7 @@ import { getOneProduct, getAllProducts, getPopularProducts } from "../../api/ind
 import { setProducts, setOneProduct, setPopularProducts } from "../actions/productsActions";
 
 export function* workerAllProducts({payload: {type, sortAsc, sortType, page, isStock}}) {
-    const paramUrl = `&Page=${page}
-    ${type ? `&Type=${type}` : ""}
-    ${sortType !== "" ? `&Sort.Sort_Asc=${sortAsc}&Sort.Type=${sortType}` : ""}
-    ${isStock? `&IsStock=${isStock}` : ""}`
+    const paramUrl = `&Page=${page}${type ? `&Type=${type}` : ""}${sortType !== "" ? `&Sort.Sort_Asc=${sortAsc}&Sort.Type=${sortType}` : ""}${isStock? `&IsStock=${isStock}` : ""}`
     const data = yield call(getAllProducts, `Product/Paging?Count=16${paramUrl}`)
     yield put(setProducts(data))
 }
@@ -23,9 +20,6 @@ export function* workerPopularProducts() {
     yield put(setPopularProducts(data))    
 }
 
-
-
-
 export function* productsPopularWorker() {
     yield fork(workerPopularProducts)
 }
@@ -35,7 +29,6 @@ export function* productsAllWorker(action) {
 }
 
 export function* productWorker(action) {
-
     yield fork(workerOneProduct, action)
 }
 

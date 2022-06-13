@@ -32,3 +32,24 @@ main {
     min-height: 90vh;
     margin-bottom: 30px;
 }
+
+.loader-cont {
+    display: flex;
+    padding-top: 20%;
+    justify-content: center;
+}
+
+.loader {
+    animation: loader 2s infinite;
+    width: 100px;
+    height: 100px;
+    path {
+        stroke: white;
+    }
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(360deg);
+    }
+}

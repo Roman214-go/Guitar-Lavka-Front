@@ -5,6 +5,7 @@ import Loader from "../components/Loader"
 import ProductpageCont from "../components/Productpage/ProductpageCont"
 import { GET_ONE_PRODUCT } from "../store/actionConstants"
 import { getOneProduct } from "../store/actions/productsActions"
+import Notfoundpage from "./Notfoundpage"
 
 export default function Productpage() {
     const {id} = useParams()
@@ -16,10 +17,18 @@ export default function Productpage() {
             payload: id
         }))
     }, [])
+    if (product == 404) {
+        return (
+            <>
+                <Notfoundpage />
+            </>
+        )
+    }
+    
     return (
         <>
             {
-                product && product.length != 0  ? <ProductpageCont product={product} id={id}/> : <Loader />         
+               product && product.length != 0  ? <ProductpageCont product={product} id={id}/> : <Loader />         
             }
         </>
     )

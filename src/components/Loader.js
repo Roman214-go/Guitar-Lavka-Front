@@ -1,7 +1,9 @@
+import { RiLoader3Fill } from "react-icons/ri"
+
 export default function Loader() {
     return (
-        <>
-            loader
-        </>
+        <div className="loader-cont">
+            <RiLoader3Fill className="loader"/>
+        </div>
     )
 }

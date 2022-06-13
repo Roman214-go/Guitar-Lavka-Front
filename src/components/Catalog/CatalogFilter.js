@@ -8,16 +8,19 @@ export default function CatalogFilter() {
     }    
     return (
         <div className="catalog-filter-cont">
-          <div className="catalog-filters" onChange={setType}>            
+          <div className="catalog-filters" onChange={setType}>
+            <label>
+              <input type="radio" name="filter" value=""/>
+              <span>ALL PRODUCTS</span></label>            
             <label>
               <input type="radio" name="filter" value="acoustic"/>
-              ACOUSTIC GUITAR</label>
+              <span>ACOUSTIC GUITAR</span></label>
             <label>
               <input type="radio" name="filter" value="electric"/>
-              ELECTRIC GUITAR</label>
+              <span>ELECTRIC GUITAR</span></label>
             <label className="radio-ukulele">
               <input type="radio" name="filter" value="ukulele"/>
-            UKULELE</label>
+              <span>UKULELE</span></label>
           </div>
         </div>
     )
