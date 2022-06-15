@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getAllProducts } from "../../store/actions/productsActions"
 import Loader from "../Loader"
+import NotFoundProducts from "./NotFoundProducts"
 import Product from "./Product"
 
 export default function CatalogProducts() {
@@ -15,6 +16,15 @@ export default function CatalogProducts() {
     useEffect(() => {
         dispatch(getAllProducts({type, sortAsc, sortType, isStock, page}))
     }, [type, sortAsc, sortType, isStock, page])
+
+    if (allProducts == "error") {
+        return (
+            <div className="catalog-not-found">
+                <NotFoundProducts />
+            </div>
+        )
+    }
+
     return (
         <div>
             {

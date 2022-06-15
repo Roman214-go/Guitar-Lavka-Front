@@ -14,7 +14,7 @@ export const favorite = (state = defaultState, {type, payload}) => {
         case DELETE_PRODUCT_FROM_FAVORITE:
             return {
                 ...state,
-                favoriteProducts: state.favoriteProducts.filter(info => info != payload)
+                favoriteProducts: state.favoriteProducts.filter(info => info.id != payload.id)
             }
         default:
             return {

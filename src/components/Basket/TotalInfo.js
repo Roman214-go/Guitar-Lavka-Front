@@ -1,8 +1,11 @@
+import { useState } from "react"
 import { useSelector } from "react-redux"
+import BasketModal from "./BasketModal"
 
 export default function TotalInfo() {
     const totalAmount = useSelector(state => state.basket.productCount)
     const totalPrice = useSelector(state => state.basket.productCountPrice)
+    const [moadalActive, setModalActive] = useState(false)
     return (
         <div>
             <div className="basket-total-cont">
@@ -17,8 +20,9 @@ export default function TotalInfo() {
                     <p>{totalPrice} $</p>
                 </div>
             </div>
-            <button>PROCCED TO CHECKOUT</button>
+            <button onClick={() => setModalActive(true)}>PROCCED TO CHECKOUT</button>
             </div>
+            <BasketModal active={moadalActive} setActive={setModalActive}/>
         </div>
     )
 }

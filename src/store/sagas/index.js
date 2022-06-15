@@ -9,7 +9,6 @@ export function* workerAllProducts({payload: {type, sortAsc, sortType, page, isS
     yield put(setProducts(data))
 }
 
-
 export function* workerOneProduct({payload: {payload}}) {
     const data = yield call(getOneProduct, `Product/${payload}`)
     yield put(setOneProduct(data))

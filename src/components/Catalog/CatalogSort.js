@@ -20,7 +20,6 @@ export default function CatalogSort() {
             <p>{numOfProducts} products</p>
             <FormGroup>
                 <FormControlLabel  control={<Checkbox onChange={(e) => dispatch({type: "SET_PRODUCTS_FILTER_STOCK", payload: e.target.checked})} 
-                
                 sx={{
                     color: 'orange',
                     '&.Mui-checked': {

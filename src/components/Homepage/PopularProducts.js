@@ -13,6 +13,9 @@ export default function PopularProducts() {
     useEffect(() => {
         dispatch(getPopularProducts())
     }, [])
+    if (popularProducts == "error") {
+        return null
+    }
     return (
         <div className="homepage-poular-products">
             <h2>Popular products<div></div></h2>

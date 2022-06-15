@@ -8,6 +8,7 @@ import maton from '../../assets/img/homepage/sponsors/maton.svg'
 import tom from '../../assets/img/homepage/sponsors/tom.svg'
 import enya from '../../assets/img/homepage/sponsors/enya.svg'
 import sigma from '../../assets/img/homepage/sponsors/sigma.svg'
+
 export default function Sponsors() {
     return (
         <div className="homepage-sponsors">

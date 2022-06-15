@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-    export default function Services() {
+
+export default function Services() {
     const [hoverTrainee, setHoverTrainee] = useState(false)
     const [hoverReparing, setHoverReparing] = useState(false)
     const [hoverDelivery, setHoverDelivery] = useState(false)
@@ -27,7 +28,7 @@ import { Link } from "react-router-dom"
                 <div className="homepage-service-reparing homepage-service-container" onMouseEnter={() => setHoverReparing(true)} onMouseLeave={() => setHoverReparing(false)}>
                     <div className="homepage-service-info">
                         <p>We can customize any of your instruments thanks to our amazing music engineers.</p>
-                        <Link to="/services"><h3>{hoverReparing ? "MORE..." : "REPARING"}</h3></Link>
+                        <Link to="/services"><h3>{hoverReparing ? "MORE..." : "RESTOVRATION"}</h3></Link>
                     </div>
                 </div>
 

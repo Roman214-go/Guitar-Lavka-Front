@@ -17,7 +17,7 @@ export default function Productpage() {
             payload: id
         }))
     }, [])
-    if (product == 404) {
+    if (product == "error") {
         return (
             <>
                 <Notfoundpage />

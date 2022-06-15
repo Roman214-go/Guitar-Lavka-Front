@@ -16,7 +16,7 @@ export const basket = (state = defaultState, {type, payload}) => {
         case DELETE_PRODUCT_FROM_BASKET:
             return {
                 ...state,
-                basketProducts: state.basketProducts.filter(info => info != payload)
+                basketProducts: state.basketProducts.filter(info => info.id != payload.id)
             }
         case SET_PRODUCT_BASKET_COUNT:
             return {

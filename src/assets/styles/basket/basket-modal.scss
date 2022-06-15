@@ -1,0 +1,30 @@
+.basket-modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    .basket-modal-content {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 25px;
+        border-radius: 12px;
+        background-color: rgb(173, 108, 24);
+        height: 200px;
+        width: 400px;
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+.basket-modal.active {
+    transform: scale(1);
+    
+}

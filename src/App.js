@@ -9,7 +9,6 @@ import Deliverypage from './pages/Deliverypage'
 import Favoritepage from './pages/Favoritepage'
 import Homepage from './pages/Homepage'
 import Notfoundpage from './pages/Notfoundpage'
-import Reviewspage from './pages/Reviewspage'
 import Servicespage from './pages/Servicespage'
 import Teachingpage from './pages/Teachingpage'
 import { useEffect } from 'react'
@@ -29,7 +28,6 @@ export default function App() {
           <Route path='catalog/:id' element={<Productpage/>} />
           <Route path='contacts' element={<Contactspage/>}/>
           <Route path='delivery' element={<Deliverypage/>}/>
-          <Route path='reviews' element={<Reviewspage/>}/>
           <Route path='services' element={<Servicespage/>}/>
           <Route path='teaching' element={<Teachingpage/>}/>
           <Route path='favorite' element={<Favoritepage/>}/>

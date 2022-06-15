@@ -41,14 +41,11 @@ const setOneProduct = (product) => {
     }
 }
 
-
-
 export { 
     setProducts,
     getAllProducts,
     getPopularProducts,
     setPopularProducts,
     getOneProduct,
-    setOneProduct,
-
+    setOneProduct
 }

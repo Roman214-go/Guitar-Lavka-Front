@@ -14,6 +14,7 @@ const Product = ({products: {products, countProducts}}) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [currentPage])
+    
     return (
         <div className="catalog-products-cont">
             <div className="products-cont">

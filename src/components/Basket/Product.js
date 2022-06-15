@@ -1,6 +1,6 @@
 import { HiPlus, HiMinus } from "react-icons/hi"
-import { useEffect, useState } from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { useState } from "react"
+import { useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
 
 export default function Product({product}) {

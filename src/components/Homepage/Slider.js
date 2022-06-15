@@ -22,20 +22,6 @@ export default function Slider() {
           </div>
         </SwiperSlide>
 
-        <SwiperSlide className="swiper-slide-1">
-          <div>
-            <h2>Takamine</h2>
-            <p>Vintage 12 strings<br/> GJ72CE - 12BSB</p>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="swiper-slide-1">
-          <div>
-            <h2>Takamine</h2>
-            <p>Vintage 12 strings<br/> GJ72CE - 12BSB</p>
-          </div>
-        </SwiperSlide>
-        
       </Swiper>
     </>
   );

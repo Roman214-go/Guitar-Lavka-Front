@@ -1,0 +1,33 @@
+.contacts-header {
+    margin: 2% 10%;
+    h2 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 20px;
+        width: 60%;
+        margin-top: 1%;
+        color: rgb(100, 100, 100)
+    }
+}
+
+.contacts-main-info-cont {
+    display: flex;
+    margin: 2% 10%;
+    justify-content: space-between;
+    .contacts-info-cont {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        .contact-cont {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            h3 {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+    }
+}

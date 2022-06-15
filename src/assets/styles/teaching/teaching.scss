@@ -1,0 +1,17 @@
+.teching-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 2% 10%;
+    iframe {
+        width: 100%;
+        height: 650px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    a {
+        font-size: inherit;
+        border-bottom: 1px solid white;
+    }
+}

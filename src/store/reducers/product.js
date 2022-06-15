@@ -4,14 +4,12 @@ const defaultState = {
     allProducts: [],
     popularProducts: [],
     oneProduct: [],
-    numOfProducts: 0,
-    
+    numOfProducts: 0
 }
 
 export const products = (state = defaultState, {type, payload}) => {
     switch(type) {
         case SET_ALL_PRODUCTS:
-            console.log(payload);
         return {
                 ...state,
                 allProducts: payload,

@@ -1,0 +1,32 @@
+.about-shop-cont {
+    display: grid;
+    grid-template-columns: 6fr 5fr;
+    margin: 2% 10%;
+    gap: 100px;
+    line-height: 1.3em;
+    .about-shop-left {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        flex-direction: column;
+        p {
+            color: rgb(149, 149, 149);
+        }
+        h2, h4 {
+            font-weight: 700;
+        }
+        h2 {
+            padding-bottom: 8px;
+            border-bottom: 2px solid orange;
+        }
+    }
+    .about-shop-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        img {
+            width: 100%;
+        }
+    }
+}

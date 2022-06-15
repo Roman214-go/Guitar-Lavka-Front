@@ -24,6 +24,7 @@ export default function ProductAdditionalInfo({info: {description, characteristi
         setIsActiveCharacteristic(false)
         setIsActiveWarranty(true)
     }
+    
     return (
         <div className="productpage-additional-info-cont">
             <div className="proudctpage-additional-info-buttons">
@@ -40,7 +41,6 @@ export default function ProductAdditionalInfo({info: {description, characteristi
                     </ol>
                     :
                     <p>{infoState}</p>
-
                 }
             </div>
         </div>

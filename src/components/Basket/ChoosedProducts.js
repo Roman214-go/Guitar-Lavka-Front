@@ -6,7 +6,7 @@ export default function ChoosedProducts() {
     if (!productsInBasket || productsInBasket.length == 0) {
         return null
     }
-    console.log(productsInBasket);
+    
     return (
         <div className="basket-all-products">
 
@@ -17,7 +17,6 @@ export default function ChoosedProducts() {
             </div>
             {
                 productsInBasket.map((item, index) => (    
-                    
                     <Product product={item} key={index} />
                 ))
             }
