@@ -61,7 +61,7 @@ On the product page, you can find out the full information about the selected pr
 
 On the shopping cart page, you can increase the number of purchased items or remove them. There is also a window "Total amount" which shows the price and quantity of goods. When you click on the "Procced to checkout" button, a modal window opens.
 
-![image](https://user-images.githubusercontent.com/77338277/177397993-be505fa3-9dc1-4c4f-ade3-9af438842c12.png)
+![image](https://user-images.githubusercontent.com/77338277/177398124-b85ede9a-5e51-4f4b-9f09-b58ca9bcf0dd.png)
 
 ![image](https://user-images.githubusercontent.com/77338277/177395365-7d285fe1-5ec0-45af-bdc4-5b59c3ed2552.png)
 
