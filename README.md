@@ -7,9 +7,9 @@ The project consists of a front-end part and a back-end part. When working with 
 
 ## Begining
 
-Clone frontend part of application from this repo https://github.com/Roman214-go/Guitar-Lavka-Front
+Clone frontend part of application from this repo: https://github.com/Roman214-go/Guitar-Lavka-Front
 
-Clone backend part of application from this repo https://github.com/Ranevsky/Shop
+Clone backend part of application from this repo: https://github.com/Ranevsky/Shop
 
 
 ## Getting started
