@@ -2,7 +2,7 @@
 
 ## About project
 
-The project consists of a front-end part and a back-end part. When working with the front-end part on react, i used Redax, Redax-saga, the swiper library, the Yandex maps API. Written error handling from the backend in such a way that the website does not break and still look presentable. The website is written on functional components.
+The project consists of a front-end part and a back-end part. When working with the front-end part on react, i used Redax, Redax-saga, React-Router, the swiper library, the Yandex maps API. Written error handling from the backend in such a way that the website does not break and still look presentable. The website is written on functional components.
 
 
 ## Begining
